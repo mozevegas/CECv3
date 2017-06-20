@@ -1,0 +1,95 @@
+﻿@model CECv3.Models.Coupons
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Coupon Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Coupon Number
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouponNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GS1Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GS1Data)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeItem2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeItem2)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="col-md-offset-1 col-md-12" style="padding-top: 10px;">
+    <a href="@Url.Action("Edit", "Coupons", new { id = Model.Id })" class="btn btn-warning btn-lg">Edit Coupon</a>
+</div>
+
+<div class="col-md-offset-1 col-md-12" style="padding-top: 10px; padding-bottom: 25px;">
+    <a href="@Url.Action("Index", "Coupons")" class="btn btn-info btn-lg">Back to Coupon Database</a>
+</div>
+

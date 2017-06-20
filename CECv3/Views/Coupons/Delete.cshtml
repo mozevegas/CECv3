@@ -1,0 +1,104 @@
+﻿@model CECv3.Models.Coupons
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Coupons</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GS1Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GS1Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouponNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouponNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DropDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DropDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeItem2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeItem2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

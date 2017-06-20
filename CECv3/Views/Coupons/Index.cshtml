@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CECv3.Models.Coupons>
+
+@{
+    ViewBag.Title = "Coupons";
+}
+
+<h2>Coupon Database</h2>
+<p>Click on coupon number for details.</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            Coupon Number
+        </th>
+        <th>
+            Drop Date
+        </th>
+        <th>
+            Expiration Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@Url.Action("Details", "Coupons", new { id=item.Id })">@Html.DisplayFor(modelItem => item.CouponNum)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DropDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expiration)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    <a href="@Url.Action("Create", "Coupons")" class="btn btn-warning btn-lg">Create Coupon</a>
+</p>
+

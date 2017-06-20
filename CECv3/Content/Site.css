@@ -7,6 +7,8 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +23,24 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/*  ------   NEW STYLES  ------------------  */
+
+body {
+    font-family: 'Cabin', sans-serif;
+    background-color: #304269;
+    font-size: 18px;
+}
+
+.body-content {
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.navbar-inverse {
+    background-color: #262526;
 }
