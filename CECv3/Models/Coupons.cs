@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -29,7 +30,8 @@ namespace CECv3.Models
         public ApplicationUser User { get; set; }
 
         // Coupon Type (Cents off or Free Item)
-        //public int CouponTypeId { get; set; }
-        //public CouponType CouponType { get; set; }
+        public int? CouponTypeId { get; set; }
+        [ForeignKey("CouponTypeId")]
+        public CouponType CouponType { get; set; }
     }
 }

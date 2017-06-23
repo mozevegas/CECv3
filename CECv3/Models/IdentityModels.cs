@@ -36,5 +36,6 @@ namespace CECv3.Models
 
         public DbSet<Coupons> Coupons { get; set; }
         public DbSet<AcctDetails> AcctDetails { get; set; }
+        public DbSet<CouponType> CouponTypes { get; set; }
     }
 }

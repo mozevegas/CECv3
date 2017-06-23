@@ -40,6 +40,7 @@ namespace CECv3.Controllers
         public ActionResult Create()
         {
             ViewBag.UserId = new SelectList(db.Users, "Id", "Email");
+            ViewBag.CouponTypeId = new SelectList(db.CouponTypes, "Id", "CouponTypeName");
             return View();
         }
 
@@ -58,6 +59,7 @@ namespace CECv3.Controllers
             }
 
             ViewBag.UserId = new SelectList(db.Users, "Id", "Email", coupons.UserId);
+            ViewBag.CouponTypeId = new SelectList(db.CouponTypes, "Id", "CouponTypeName", coupons.CouponTypeId );
             return View(coupons);
         }
 

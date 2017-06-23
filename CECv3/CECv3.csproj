@@ -220,10 +220,15 @@
     <Compile Include="Migrations\201706200329322_sixth.Designer.cs">
       <DependentUpon>201706200329322_sixth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706220042360_AddedCouponType.cs" />
+    <Compile Include="Migrations\201706220042360_AddedCouponType.Designer.cs">
+      <DependentUpon>201706220042360_AddedCouponType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AcctDetails.cs" />
     <Compile Include="Models\Coupons.cs" />
+    <Compile Include="Models\CouponType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -356,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706200329322_sixth.resx">
       <DependentUpon>201706200329322_sixth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706220042360_AddedCouponType.resx">
+      <DependentUpon>201706220042360_AddedCouponType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
