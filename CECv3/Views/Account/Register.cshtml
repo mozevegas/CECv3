@@ -3,20 +3,44 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>Register a New Account</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
+    <p>Fill out all information below</p>
     <hr />
+
     @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    // ---------------- Enter USERNAME (this is new)
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <label class="col-md-2 control-label">User Name</label> 
+        @*@Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })*@
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        </div>
+    </div>
+
+    // ---------------- Enter USER-ROLE (this is new)
+    <div class="form-group">
+        <label class="col-md-2 control-label">User Role</label> 
+        <div class="col-md-10">
+            @Html.DropDownList("UserRoles", (SelectList)ViewBag.Name, " ")
+        </div>
+    </div>
+
+
+    // ---------------- Enter EMAIL
+    <div class="form-group">
+        <label class="col-md-2 control-label">E-Mail</label> 
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
         </div>
     </div>
+
+    //  ---------------- Password Info ------------------
+
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
@@ -29,9 +53,11 @@
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
+
+    //--------------------- Submit Button
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" value="Register" class="btn btn-warning btn-lg" />
         </div>
     </div>
 }

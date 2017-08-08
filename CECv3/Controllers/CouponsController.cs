@@ -14,6 +14,7 @@ namespace CECv3.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize]
         // GET: Coupons
         public ActionResult Index()
         {
@@ -21,6 +22,7 @@ namespace CECv3.Controllers
             return View(coupons.ToList());
         }
 
+        [Authorize]
         // GET: Coupons/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,6 +38,7 @@ namespace CECv3.Controllers
             return View(coupons);
         }
 
+        [Authorize]
         // GET: Coupons/Create
         public ActionResult Create()
         {
@@ -63,6 +66,7 @@ namespace CECv3.Controllers
             return View(coupons);
         }
 
+        [Authorize]
         // GET: Coupons/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -96,6 +100,7 @@ namespace CECv3.Controllers
             return View(coupons);
         }
 
+        [Authorize]
         // GET: Coupons/Delete/5
         public ActionResult Delete(int? id)
         {

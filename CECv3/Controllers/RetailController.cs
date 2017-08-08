@@ -14,6 +14,7 @@ namespace CECv3.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize]
         // GET: Retail
         public ActionResult Index()
         {
@@ -22,6 +23,7 @@ namespace CECv3.Controllers
             return View(acctDetails.ToList());
         }
 
+        [Authorize]
         // GET: Retail/Details/5
         public ActionResult Details(int? id)
         {
@@ -37,6 +39,7 @@ namespace CECv3.Controllers
             return View(acctDetails);
         }
 
+        [Authorize]
         // GET: Retail/Create
         public ActionResult Create()
         {
@@ -62,6 +65,7 @@ namespace CECv3.Controllers
             return View(acctDetails);
         }
 
+        [Authorize]
         // GET: Retail/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -95,6 +99,7 @@ namespace CECv3.Controllers
             return View(acctDetails);
         }
 
+        [Authorize]
         // GET: Retail/Delete/5
         public ActionResult Delete(int? id)
         {
