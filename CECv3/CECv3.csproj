@@ -230,6 +230,10 @@
     <Compile Include="Migrations\201706230347081_UserRoles.Designer.cs">
       <DependentUpon>201706230347081_UserRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708080545171_changedFields.cs" />
+    <Compile Include="Migrations\201708080545171_changedFields.Designer.cs">
+      <DependentUpon>201708080545171_changedFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AcctDetails.cs" />
@@ -382,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706230347081_UserRoles.resx">
       <DependentUpon>201706230347081_UserRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708080545171_changedFields.resx">
+      <DependentUpon>201708080545171_changedFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

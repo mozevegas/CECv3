@@ -23,13 +23,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            <a href="@Url.Action("Details", "Coupons", new { id=item.Id })">@Html.DisplayFor(modelItem => item.CouponNum)</a>
+            <a href="@Url.Action("Details", "Coupons", new { id=item.Id })">@Html.DisplayFor(modelItem => item.COUP_GS1)</a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DropDate)
+            @Html.DisplayFor(modelItem => item.COUP_DROPDATE)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Expiration)
+            @Html.DisplayFor(modelItem => item.COUP_ENDDATE)
         </td>
         <td>
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })

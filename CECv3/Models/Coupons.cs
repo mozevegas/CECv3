@@ -10,19 +10,20 @@ namespace CECv3.Models
     {
         public int Id { get; set; }
 
-        public string GS1Data { get; set; }
-        public string CouponNum { get; set; }
-        public DateTime DropDate { get; set; }
-        public DateTime Expiration { get; set; }
-
-        // Cents Off
-        public Decimal? Value { get; set; }
-        public int? Quantity { get; set; }
-        public string UPC { get; set; }
-
-        // Free Item
-        public string FreeItem { get; set; }
-        public string FreeItem2 { get; set; }
+        public string COUP_GS1 { get; set; }
+        public string COUP_MFG_ID { get; set; }
+        public string COUP_TYPE { get; set; }
+        public string COUP_VALUE { get; set; }
+        public string COUP_DROPDATE { get; set; }
+        public string COUP_ENDDATE { get; set; }
+        public string COUP_UPC_FREE { get; set; }
+        public string COUP_QTY_FREE { get; set; }
+        public string COUP_UPC_ONE { get; set; }
+        public string COUP_QTY_ONE { get; set; }
+        public string COUP_UPC_TWO { get; set; }
+        public string COUP_QTY_TWO { get; set; }
+        public string COUP_UPC_THREE { get; set; }
+        public string COUP_QTY_THREE { get; set; }
 
         // Foreign Key here
 
